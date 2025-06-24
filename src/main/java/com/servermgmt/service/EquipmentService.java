@@ -6,13 +6,15 @@ import com.servermgmt.model.Equipment;
 import com.servermgmt.repository.EquipmentRepository;
 import com.servermgmt.repository.ServerRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.servermgmt.exception.EntityNotFoundException;
-
+import com.servermgmt.exception.DuplicateSerialNumberException;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class EquipmentService {
@@ -22,6 +24,9 @@ public class EquipmentService {
 
     @Transactional
     public EquipmentDTO createEquipment(EquipmentDTO dto) {
+        if (equipmentRepository.findBySerialNumber(dto.getSerialNumber()).isPresent()) {
+            throw new DuplicateSerialNumberException(dto.getSerialNumber());
+        }
         Equipment equipment = equipmentMapper.toEntity(dto);
         Equipment savedEquipment = equipmentRepository.save(equipment);
         return equipmentMapper.toDto(savedEquipment);

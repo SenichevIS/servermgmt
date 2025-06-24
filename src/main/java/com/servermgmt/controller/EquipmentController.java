@@ -1,5 +1,6 @@
 package com.servermgmt.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import com.servermgmt.dto.ApiResponse;
 import com.servermgmt.dto.EquipmentDTO;
 import com.servermgmt.service.EquipmentService;
@@ -8,9 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/equipment")
 @RequiredArgsConstructor

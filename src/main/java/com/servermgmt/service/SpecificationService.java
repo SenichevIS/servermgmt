@@ -5,13 +5,14 @@ import com.servermgmt.mapper.SpecificationMapper;
 import com.servermgmt.model.Specification;
 import com.servermgmt.repository.SpecificationRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.servermgmt.exception.EntityNotFoundException;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class SpecificationService {

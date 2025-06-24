@@ -1,0 +1,32 @@
+2025-06-24T17:57:06.473+04:00  INFO 16380 --- [server-management] [main] c.s.ServerManagementApplication          : Starting ServerManagementApplication using Java 24 with PID 16380 (C:\xalkep\laboratoryWork\server-management\target\classes started by senic in C:\xalkep\laboratoryWork\server-management)
+2025-06-24T17:57:06.475+04:00 DEBUG 16380 --- [server-management] [main] c.s.ServerManagementApplication          : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-24T17:57:06.476+04:00  INFO 16380 --- [server-management] [main] c.s.ServerManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-24T17:57:07.488+04:00  INFO 16380 --- [server-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24T17:57:07.591+04:00  INFO 16380 --- [server-management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
+2025-06-24T17:57:08.371+04:00  INFO 16380 --- [server-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-24T17:57:08.396+04:00  INFO 16380 --- [server-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24T17:57:08.397+04:00  INFO 16380 --- [server-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-24T17:57:08.476+04:00  INFO 16380 --- [server-management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24T17:57:08.476+04:00  INFO 16380 --- [server-management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1933 ms
+2025-06-24T17:57:08.774+04:00  INFO 16380 --- [server-management] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24T17:57:08.856+04:00  INFO 16380 --- [server-management] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-06-24T17:57:08.907+04:00  INFO 16380 --- [server-management] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-24T17:57:09.316+04:00  INFO 16380 --- [server-management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-24T17:57:09.358+04:00  INFO 16380 --- [server-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-24T17:57:09.712+04:00  INFO 16380 --- [server-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f07d414
+2025-06-24T17:57:09.714+04:00  INFO 16380 --- [server-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-24T17:57:09.789+04:00  WARN 16380 --- [server-management] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-24T17:57:09.826+04:00  INFO 16380 --- [server-management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-24T17:57:11.173+04:00  INFO 16380 --- [server-management] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-24T17:57:11.670+04:00  INFO 16380 --- [server-management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24T17:57:12.041+04:00  INFO 16380 --- [server-management] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-24T17:57:13.231+04:00  WARN 16380 --- [server-management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-24T17:57:13.719+04:00  INFO 16380 --- [server-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-24T17:57:13.731+04:00  INFO 16380 --- [server-management] [main] c.s.ServerManagementApplication          : Started ServerManagementApplication in 7.891 seconds (process running for 10.004)
