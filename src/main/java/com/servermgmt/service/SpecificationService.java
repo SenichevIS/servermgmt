@@ -1,5 +1,6 @@
 package com.servermgmt.service;
 
+import com.servermgmt.dto.EquipmentDTO;
 import com.servermgmt.dto.SpecificationDTO;
 import com.servermgmt.mapper.SpecificationMapper;
 import com.servermgmt.model.Specification;
@@ -47,6 +48,18 @@ public class SpecificationService {
 
     public List<SpecificationDTO> getSpecificationsByEquipment(Long equipmentId) {
         return specificationRepository.findByEquipmentId(equipmentId).stream()
+                .map(specificationMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    public SpecificationDTO getSpecificationById(Long id) {
+        Specification spec = specificationRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Specification", id));
+        return specificationMapper.toDto(spec);
+    }
+
+    public List<SpecificationDTO> searchSpecification(String query) {
+        return specificationRepository.findBySpecNameContainingIgnoreCase(query).stream()
                 .map(specificationMapper::toDto)
                 .collect(Collectors.toList());
     }

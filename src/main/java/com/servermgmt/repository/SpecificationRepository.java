@@ -9,4 +9,5 @@ import java.util.List;
 public interface SpecificationRepository extends JpaRepository<Specification, Long> {
 
     List<Specification> findByEquipmentId(Long equipmentId);
+    List<Specification> findBySpecNameContainingIgnoreCase(String specName);
 }
